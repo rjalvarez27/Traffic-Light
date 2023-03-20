@@ -1,26 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  const [button, setButton] = useState(null);
+
+  const colors = {
+    red: {
+      normal: "#FF0000",
+      light: "#FF6666",
+    },
+    yellow: {
+      normal: "#f0e330",
+      light: "#faee43",
+    },
+    green: {
+      normal: "#2ead1d",
+      light: "#39db23",
+    },
+  };
+  const handleClick = (color) => {
+    setButton(color);
+  };
+
+  return (
+    <div>
+      <div className="base bg-dark m-auto mt-3"></div>
+      <div className="cuadro bg-dark m-auto p-2 rounded-top">
+        <button
+          className="lighthouse m-auto rounded-circle d-flex justify-content-center"
+          style={{
+            backgroundColor:
+              button === "red" ? colors.red.light : colors.red.normal,
+          }}
+          onClick={() => handleClick("red")}
+        ></button>
+        <button
+          className="lighthouse m-auto mt-2 rounded-circle d-flex justify-content-center"
+          style={{
+            backgroundColor:
+              button === "yellow" ? colors.yellow.light : colors.yellow.normal,
+          }}
+          onClick={() => handleClick("yellow")}
+        ></button>
+        <button
+          className="lighthouse m-auto mt-2 rounded-circle d-flex justify-content-center"
+          style={{
+            backgroundColor:
+              button === "green" ? colors.green.light : colors.green.normal,
+          }}
+          onClick={() => handleClick("green")}
+        ></button>
+      </div>
+    </div>
+  );
 };
 
 export default Home;
