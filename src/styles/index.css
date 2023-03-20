@@ -1,23 +1,43 @@
   * {
-  background: grey;
+    background: grey;
   }
 
-  .base{
-  width: 20px;
-  height: 150px;
+  .base {
+    width: 20px;
+    height: 150px;
   }
 
-  .cuadro{
-  width: 150px;
-  height: 400px;
+  .cuadro {
+    width: 150px;
+    height: 400px;
   }
- 
+
   .lighthouse {
     width: 120px;
     height: 120px;
-   }
- 
+  }
 
+  .red {
 
-   
+    background-color: #FF0000;
+  }
 
+  .yellow {
+
+    background-color: yellow;
+
+  }
+
+  .green {
+
+    background-color: green;
+
+  }
+
+  .glow {
+
+    -webkit-box-shadow: 0px 0px 105px 45px rgba(255, 255, 255, 0.9);
+    -moz-box-shadow: 0px 0px 105px 45px rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 105px 45px rgba(255, 255, 255, 0.9);
+
+  }
